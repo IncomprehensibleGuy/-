@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3.2.1-3.2.9</title>
+    <style>
+        .task {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #000;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        
+        /* TASK 1 STYLES */
+        .task1 img {
+            box-shadow: 10px 10px 10px 3px rgba(158, 158, 158, 0.9);
+        }
+
+        /* TASK 2 STYLES */
+        .task2 img {
+            transition: 0.5s ease;
+            box-shadow: 50px 50px 10px #fff, -20px 20px 10px rgb(115, 247, 240), 5px -5px 10px #a662ff, -15px -15px 10px #63467e;
+        }
+        .task2 img:hover {
+            box-shadow: 5px 5px 10px #000, -15px 15px 10px rgb(141, 9, 16), 50px -50px 10px #d2afff, -20px -20px 10px #2712e4;
+        }
+        
+
+        /* TASK 4 STYLES */
+        .task4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* TASK 5 STYLES */
+        .task5 td {
+            width: 50px;
+            height: 50px;
+        }
+        .chess {
+            background-color: rgb(139, 139, 139);
+            border-spacing: 0;
+            border: 1px solid rgb(71, 71, 71);
+            border-collapse: collapse;
+        }
+        .chess tr:nth-child(odd) td:nth-child(odd) {
+            background: rgb(245, 0, 0);
+        }
+        .chess tr:nth-child(even) td:nth-child(even) {
+            background: rgb(245, 0, 0);
+        }
+        .chess th {
+            padding: .5em;
+        }
+        .chess td {
+            width: 2em;
+            height: 2em;
+            border: 1px solid;
+        }
+        
+        /* TASK 6 STYLES */
+        .task6 .diagram {
+            background: #eaeaea;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font: 30px sans-serif;
+            border: 24px solid #4576ff;
+            border-right: 24px solid #ccc;
+            border-radius: 100px;
+            transform: rotate(-45deg);
+        }
+        .diagram-text {
+            display: block;
+            transform: rotate(45deg) translate(25px, 20px);
+        }
+
+        /* TASK 7 STYLES */
+        .task7 .form7 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .form7 > .field > input {
+            margin-bottom: 10px;
+        }
+        .field {
+            display: flex;
+        }
+        .field1 > input, .field2 > input, .field3 > input, .field4 > input, .field5 > input {
+            margin-left: 10px;
+            order: 1;
+        }
+        .field > label::before {
+            margin-right: 5px;
+            content: '\2716'; 
+        }
+        .field > input[required]:valid + label::before {
+            content: '\2714'; 
+        }
+
+        /* TASK 8 STYLES */
+        .task8 .square {
+            width: 20vw;
+            height: 20vw;
+            border: 1px solid black;
+            font: 12px sans-serif;
+            padding: 10px;
+        }
+        
+        /* TASK 9 STYLES */
+        .form9 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .form9 input[type="checkbox"]:checked+label {
+            background: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="task task1">
+        <img src="google.jpg" alt="google logo" class="logo">
+    </div>
+    
+    <div class="task task2">
+        <img src="google.jpg" alt="google logo" class="logo">
+    </div>
+
+    <div class="task task3">
+        <div class="text" style="
+        width: 50%;
+        background-color: rgb(37, 28, 28);
+        color: #fff;
+        box-shadow: 10px 10px 10px 3px rgba(41, 19, 91, 0.9);
+        padding: 50px 20px;
+        ">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, vel illo neque officia aut, placeat inventore, aliquam consequatur est cum dolores nulla voluptates porro fugit quo temporibus maxime voluptate natus at voluptatem sunt aspernatur unde.
+            Mollitia maiores dolorem corrupti at accusantium eveniet, dolorum recusandae, quo totam cum soluta rem voluptatem dolores explicabo autem possimus iusto illum sapiente suscipit assumenda? Odit rem sint minus adipisci maiores voluptatem repudiandae
+            doloremque dignissimos, veniam laborum quam cum in officiis. Nobis expedita illum mollitia sunt ea ex harum temporibus earum libero commodi? Sed quas delectus temporibus recusandae reprehenderit. Ab modi dolore, culpa id voluptatum sed.
+        </div>
+    </div>
+    
+    <div class="task task4">
+        <p class="text4">
+            Знаки карточных мастей: &spades; &clubs; &hearts; &diams;
+        </p>
+        <p class="text4">
+            Первые пять букв греческого алфавита: &alpha; &beta; &gamma; &delta; &epsilon;
+        </p>
+        <p class="text4">
+            Знаки денежных единиц: &dollar; &pound; &yen; &euro;
+        </p>
+        <p class="text4">
+            Знаки ©, ®, торговой марки: &copy; &reg; &trade;
+        </p>
+        <p class="text4">
+            Дроби ¼, ½, ¾: &frac14; &frac12; &frac34;
+        </p>
+        <p class="text4">
+            Знаки ¶, §, тире, длинное тире: &#182; &#167; &#8211; &#8212;
+        </p>
+        <p class="text4">
+            Полезные знаки и символы на свой выбор: &ldquo; &rdquo; &fnof; &radic; &int;
+        </p>
+    </div>
+    
+    <div class="task task5">
+        <table class="chess">
+            <tr>
+                <th></th>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+                <th>d</th>
+                <th>e</th>
+                <th>f</th>
+                <th>g</th>
+                <th>h</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="task task6">
+        <div class="diagram">
+            <span class="diagram-text">
+                75%
+            </span>
+        </div>
+    </div>
+    
+    <div class="task task7">
+        <form action="post" class="form7" name="form7">
+            <div class="field field1">
+                <input type="text" name="field1" id="" required>
+                <label for="">Имя пользователя</label>
+            </div>
+            <div class="field field2">
+                <input type="number" name="" id="" required>
+                <label for="">Сколько вам лет?</label>
+            </div>
+            <div class="field field3">
+                <input type="text" name="" id="" required>
+                <label for="">Вы учитесь или работаете?</label>
+            </div>
+            <div class="field field4">
+                <input type="text" name="" id="" required>
+                <label for="">Сколько у вас свободного времени?</label>
+            </div>
+            <div class="field field5">
+                <input type="text" name="" id="" required>
+                <label for="">Что вы обычно делаете в свободное время?</label>
+            </div>
+            <button type="submit">
+                Отправить
+            </button>
+        </form>
+    </div>
+
+    <div class="task task8">
+        <div class="square">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repudiandae est consequatur officiis tempora eos tenetur iste corporis modi molestias quia minus, quos omnis sunt dolorem ut recusandae sequi quisquam ipsum pariatur nemo obcaecati deleniti
+            provident! Explicabo illo aperiam sit in voluptatum, quo nulla temporibus inventore molestiae, vitae architecto doloremque?
+        </div>
+    </div>
+
+    <div class="task task9">
+        <form action="" class="form9">
+            <div class="form9__item">
+                <input type="checkbox" name="" id="">
+                <label for="">HTML</label>
+            </div>
+            <div class="form9__item">
+                <input type="checkbox" name="" id="">
+                <label for="">CSS</label>
+            </div>
+            <div class="form9__item">
+                <input type="checkbox" name="" id="">
+                <label for="">JS</label>
+            </div>
+            <div class="form9__item">
+                <input type="checkbox" name="" id="">
+                <label for="">LESS</label>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
