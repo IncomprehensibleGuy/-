@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Практика 6</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font: 30px sans-serif;
+        }
+        
+        meter {
+            width: 300px;
+            height: 30px;
+        }
+        
+        progress {
+            appearance: none;
+            width: 300px;
+            height: 30px;
+        }
+        
+        progress::-webkit-progress-bar {
+            background-color: #fff;
+            box-shadow: 0 0 3px #666 inset;
+        }
+        
+        progress::-webkit-progress-value {
+            background: -webkit-linear-gradient(-45deg, transparent 30%, #8ebf42 70%, #8ebf42 40%, transparent 30%), -webkit-linear-gradient(top, #96f204, #8ebf42);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="meter">
+        <label for="label-2">
+            0.5 из 1
+        </label>
+        <meter id="label-2" value="0.5" max="1" low="0.33" high="0.66" optimum="0.8"></meter>
+    </div>
+
+    <div class="progress">
+        <label for="label-1">
+            0.7 из 1
+        </label>
+        <progress id="label-1" value="0.7" max="1"></progress>
+    </div>
+
+</body>
+
+</html>

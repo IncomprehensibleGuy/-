@@ -1,0 +1,19 @@
+.menu {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.menu__item {     
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+}
