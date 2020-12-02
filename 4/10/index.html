@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            font: 16px arial;
+        }
+        ul {
+            list-style: none; 
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            width: 500px;
+            margin: 0 auto 30px;
+        }
+        .menu-list > li {
+            display: inline-block;
+            position: relative;
+        }
+        a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            outline: none;
+            font-family: 'Lora', serif;
+            transition: .5s linear;
+        }
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+            transition: 0.5s ease-in-out;
+        }
+        .menu ul {
+            background: #cacaca;
+        }
+        .menu ul a {
+            color: #000;
+        }
+        .menu .submenu {
+            visibility: hidden;
+            opacity: 0;
+            background: #f7f7f7;
+        }
+        .menu ul li:hover .submenu {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>      
+    <nav class="menu">
+        <ul class="menu-list">
+            <li>
+                <a href="/">
+                    Python<i class="arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">
+                            Django
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Flask
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Tornado
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    JavaScript<i class="arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">
+                            VueJS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            ReactJS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Angular
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            UIkit
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    Java<i class="arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">
+                            Spring
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Struts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Wicket 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    PHP<i class="arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">
+                            Laravel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Symfony
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Item 3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Zend
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Phalcon
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    C#<i class="arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">
+                            ASP.NET
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

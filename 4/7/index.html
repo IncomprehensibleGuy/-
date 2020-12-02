@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .weather {
+            font: 12px arial;
+        }
+        .weather__options {
+            margin-bottom: 20px;
+        }
+        .option {
+            margin-right: 5px;
+        }
+        .current {
+            margin-right: 15px;
+            vertical-align: bottom;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        button, button:active, button:focus { outline: none; }
+        .btn {
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 15px;
+            background-color: rgb(235, 235, 235);
+            transition: .3s ease;
+        }
+        .btn:hover {
+            background-color: rgb(210, 210, 210);
+        }
+      
+        .weather__body {
+            display: flex;
+        }
+        .weatehr__card {
+            width: 100px;
+            margin: 0 5px 0 0;
+            border: 2px solid #fff;
+            transition: .5s ease;
+        }
+        .weatehr__card:hover {
+            border: 2px solid rgb(173, 173, 173);
+        }
+        .week-day {
+            margin: 0 0 5px 0;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .date {
+            margin: 0 0 2px 0;
+            font-size: 13px;
+            color: grey;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+        .day {
+            margin: 5px 0 0 0;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .nigth {
+            margin: 0 0 8px 0;
+            font-size: 12px;
+            color: grey;
+        }
+        .description {
+            margin: 0 0 0 0;
+            font-size: 13px;
+            color: grey;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="weather">
+        <div class="weather__options">
+            <span class="option current">Прогноз на 10 дней</span>
+            <button class="option btn detail-10-days">
+                Подробный прогноз на 10 дней
+            </button>
+            <button class="option btn detail-month">
+                На месяц
+            </button>
+        </div>
+        <div class="weather__body">
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    29 сент
+                </p>
+                <img src="cloudy.svg" alt="" class="icon">
+                <p class="day">
+                    днём +14°
+                </p>
+                <p class="nigth">
+                    ночью +9°
+                </p>
+                <p class="description">
+                    Облачно с прояснениями
+                </p>
+            </div>
+
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    30 сент
+                </p>
+                <img src="cloud.svg" alt="" class="icon">
+                <p class="day">
+                    +15°
+                </p>
+                <p class="nigth">
+                    +10°
+                </p>
+                <p class="description">
+                    Облачно
+                </p>
+            </div>
+
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    1 окт
+                </p>
+                <img src="cloudy.svg" alt="" class="icon">
+                <p class="day">
+                    +17°
+                </p>
+                <p class="nigth">
+                    +9°
+                </p>
+                <p class="description">
+                    Облачно с прояснениями
+                </p>
+            </div>
+
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    2 окт
+                </p>
+                <img src="sun.svg" alt="" class="icon">
+                <p class="day">
+                    +20°
+                </p>
+                <p class="nigth">
+                    +11°
+                </p>
+                <p class="description">
+                    Ясно
+                </p>
+            </div>
+
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    3 окт
+                </p>
+                <img src="cloudy.svg" alt="" class="icon">
+                <p class="day">
+                    +19°
+                </p>
+                <p class="nigth">
+                    +11°
+                </p>
+                <p class="description">
+                    Облачно с прояснениями
+                </p>
+            </div>
+
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    4 окт
+                </p>
+                <img src="sun.svg" alt="" class="icon">
+                <p class="day">
+                    +22°
+                </p>
+                <p class="nigth">
+                    +12°
+                </p>
+                <p class="description">
+                    Ясно
+                </p>
+            </div>
+
+            <div class="weatehr__card">
+                <p class="week-day">
+                    Сегодня
+                </p>
+                <p class="date">
+                    5 окт
+                </p>
+                <img src="sun.svg" alt="" class="icon">
+                <p class="day">
+                    +23°
+                </p>
+                <p class="nigth">
+                    +14°
+                </p>
+                <p class="description">
+                    Ясно
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

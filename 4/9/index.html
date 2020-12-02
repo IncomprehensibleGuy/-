@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button, button:active, button:focus { outline: none; }
+        .btn {
+            margin: 0 20px 0 0;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 15px;
+            background-color: rgb(235, 235, 235);
+            transition: .5s ease-in-out;
+            font: 20px arial;
+        }
+
+        .btn1 {
+            background: rgb(238,174,202);
+            background: linear-gradient(30deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            box-shadow: inset 5px 0.3em rgb(197, 187, 132);
+        }
+        .btn1:hover {
+            transform: rotate(90deg);
+        }
+        .btn2 {
+            background: rgb(131,58,180);
+            background: linear-gradient(30deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+        .btn2:hover {
+            transform: skew(30deg);
+        }
+        .btn3 {
+            background: rgb(2,0,36);
+            background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+        }
+        .btn3:hover {
+            transform: scale(1.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="btn btn1">Button 1</button>
+    <button class="btn btn2">Button 2</button>
+    <button class="btn btn3">Button 3</button>
+ 
+</body>
+</html>

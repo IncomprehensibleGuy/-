@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            margin-bottom: 30px;
+        }
+        table {
+            border: 2px solid rgb(0, 177, 177);
+        }
+        tr {
+            height: 40px;
+        }
+        td {            
+            width: 200px;
+            padding-left: 20px;
+        }
+        
+        .table1 thead > tr {
+            border-bottom: 1px solid #000;
+            background-color: #fff; 
+        }
+        .table1 thead > tr:hover {
+            background-color: #fff !important;
+        }
+        .table1 tr {
+            background-color: rgb(169, 252, 252);
+        }
+        .table1 tr:hover {
+            transition: 0.5s ease;
+            background-color: rgb(128, 187, 182);
+        }
+        
+        .table2 {
+            border-collapse: collapse;
+            border-top: 5px solid rgb(0, 177, 177);
+            border-bottom: 5px solid rgb(0, 177, 177);
+        }
+        .table2 thead {
+            font-size: 12pt;
+            text-transform: uppercase;
+        }
+        .table2 td {
+            text-align: center;
+            border-right: 1px solid #aabcfe;
+            border-left: 1px solid #aabcfe
+        }
+
+    </style>
+</head>
+<body>
+<table class="table1" cellspacing="0">
+    <thead>
+        <tr>
+            <td>Customer Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Buys</td>
+            <td>Date Joined</td>    
+        </tr>
+    </thead>
+    <tr>
+        <td>1</td>
+        <td>Vasya</td>
+        <td>Pupkin</td>
+        <td>0</td>
+        <td>20.05.2020</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Petya</td>
+        <td>Lololoev</td>
+        <td>20</td>
+        <td>16.04.2019</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Misha</td>
+        <td>Mishev</td>
+        <td>18</td>
+        <td>30.05.2017</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Grisha</td>
+        <td>Grishev</td>
+        <td>100500</td>
+        <td>01.03.2019</td>
+    </tr>
+</table>
+
+<table class="table2">
+    <thead>
+        <tr>
+            <td>Notebooks</td>
+            <td>Smartphones</td>
+            <td>Headphones</td>
+            <td>Accessories</td>
+        </tr>
+    </thead>
+    <tr>
+        <td>Macbook Pro 13 2020</td>
+        <td>IPhone 8</td>
+        <td>JBL</td>
+        <td>Apple watch</td>
+    </tr>
+    <tr>
+        <td>Xiaomi RedmiBook 15 2019</td>
+        <td>IPhone X</td>
+        <td>Sonny</td>
+        <td>Mi Band 4</td>
+    </tr>
+    <tr>
+        <td>Asus VivoBook 13 2020</td>
+        <td>IPhone 11</td>
+        <td>Apple Airpods</td>
+        <td>Яндекс станция</td>
+    </tr>
+</table>
+
+</body>
+</html>

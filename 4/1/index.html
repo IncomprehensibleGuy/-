@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        li:nth-child(1) {
+            text-decoration: underline;
+        }
+        li:nth-child(1) span::before {
+            content: '\2018'; /* Левая одиночная кавычка */
+        }
+        li:nth-child(1) span::after {
+            content: '\2019'; /* Правая одиночная кавычки */
+        }
+        li:nth-child(2) {
+            color: red;
+        }
+        li:nth-child(2) span::before {
+            content: '\201A'; /* Нижняя одиночная кавычка*/
+        }
+        li:nth-child(2) span::after {
+            content: '\201A'; /* Нижняя одиночная кавычки */
+        }
+        li:nth-child(3) {
+            line-height: 40px;
+        }
+        li:nth-child(3) span::before {
+            content: '\201C'; /* Левая двойная кавычка */
+        }
+        li:nth-child(3) span::after {
+            content: '\201D'; /* Правая двойная кавычка */
+        }
+        li:nth-child(4) {
+            letter-spacing: 3px;
+        }
+        li:nth-child(4) span::before {
+            content: '\201E'; /* Нижняя двойная кавычка */
+        }
+        li:nth-child(4) span::after {
+            content: '\201E'; /* Нижняя двойная кавычка */
+        }
+        li:nth-child(5) {
+            text-transform: uppercase;
+        }
+        li:nth-child(5) span::before {
+            content: '\AB'; /* Открывающая двойная угловая кавычка */
+        }
+        li:nth-child(5) span::after {
+            content: '\BB'; /* Закрывающая двойная угловая кавычка */
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+            <span>Левая одиночная и правая одиночная кавычки</span>
+        </li>
+        <li>
+            <span> Левая одиночная и правая одиночная кавычки </span>
+        </li>
+        <li>
+            <span>Левая и правая двойные кавычки</span>
+        </li>
+        <li>
+            <span>Нижняя двойная кавычка</span>
+        </li>
+        <li>
+            <span>Левая и правая двойные угловые кавычки</span>
+        </li>
+    </ol>
+</body>
+</html>

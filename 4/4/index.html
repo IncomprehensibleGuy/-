@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Батарейка</title>
+    <style>
+        .battery {
+            width: 150px;
+            height: 50px;
+            border: 4px solid #000;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .battery::before, .battery::after {
+            content: '';
+            position: absolute;
+        }
+        .battery::after {
+            width: 10px;
+            height: 20px;
+            background: #000;
+            top: 15px;
+            right: -10px; 
+        }
+        .battery::before { 
+            height: 100%; 
+        }
+        .battery__1::before {
+            width: 30%;
+            background-color: red;
+        }
+        .battery__2::before {
+            width: 70%;
+            background-color: yellow;
+        }
+        .battery__3::before {
+            width: 100%;
+            background-color: green;
+        }
+    </style>
+    </head>
+<body>
+    <div class="battery battery__1"></div>
+    <div class="battery battery__2"></div>
+    <div class="battery battery__3"></div>
+</body>
+</html>
