@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1
+    function check(test) {
+        if (test === true) {
+            console.log("Верно")
+        } else {
+            console.log("Не верно")
+        }
+    }
+    test = true
+    check(test)
+    test = false
+    check(test)
+
+    function check2(test) {
+        if (test) {
+            console.log("Верно")
+        } else {
+            console.log("Не верно")
+        }
+    }
+    test = true
+    check2(test)
+    test = false
+    check2(test)
+
+    // 2
+    function check3(test) {
+        if (test !== true) {
+            console.log("Верно")
+        } else {
+            console.log("Не верно")
+        }
+    }
+    test = true
+    check3(test)
+    test = false
+    check3(test)
+
+    function check4(test) {
+        if (!test) {
+            console.log("Верно")
+        } else {
+            console.log("Не верно")
+        }
+    }
+    test = true
+    check4(test)
+    test = false
+    check4(test)
+
+    
+</script>
+</body>
+</html>

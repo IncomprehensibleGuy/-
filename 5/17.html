@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1
+    arr = [2, 5, 9, 15, 0, 4]
+    for (let i = 0; i < arr.length; i++) if (arr[i] > 3 && arr[i] < 10) console.log(arr[i])
+
+    // 2
+    let sum = 0
+    arr = [2, -5, -9, 15, 0, -4]
+    for (let i = 0; i < arr.length; i++) if (arr[i] > 0) sum += arr[i]
+    console.log(sum)
+
+    // 3
+    arr = [1, 2, 5, 9, 4, 13, 4, 10]
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] === 4) {
+            console.log('Есть')
+            break
+        }
+
+    // 4
+    arr = [10, 20, 30, 50, 235, 3000]
+    for (let i = 0; i < arr.length; i++) {
+        c = arr[i].toString()[0]
+        if (c === '1' || c === '2' || c === '5')
+            console.log(arr[i])
+    }
+
+    // 5
+    let str = '-'
+    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    for (let i = 0; i < arr.length; i++) str += arr[i].toString() + '-'
+    console.log(str)
+
+    // 6
+    arr = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
+    div = document.createElement('div');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].toString()[1] === 'у' || arr[i].toString()[2] === 'с') div.innerHTML += arr[i].bold() + '<br>'
+        else div.innerHTML += arr[i] + '<br>'
+    }
+    document.body.append(div);
+
+    // 7
+    div = document.createElement('div');
+    date = new Date()
+    day = date.getDay()
+    arr = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
+    for (let i = 0; i < arr.length; i++) {
+        if (i === day-1) div.innerHTML += arr[i].italics() + '<br>'
+        else div.innerHTML += arr[i] + '<br>'
+    }
+    document.body.append(div);
+
+    // 8
+    n = 1000
+    num = 0
+    while (n > 50) {
+        n /= 2
+        num++
+    }
+    console.log(num)
+
+</script>
+</body>
+</html>

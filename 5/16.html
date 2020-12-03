@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1
+    let obj = {
+        green: 'зеленый',
+        red: 'красный',
+        blue: 'голубой'
+    }
+
+    for (let key in obj) console.log('key:' + key + ' value:' + obj[key])
+
+    // 2
+    obj = {
+        Коля: '200',
+        Вася: '300',
+        Петя: '400'
+    }
+
+    for (let key in obj) console.log(key + ' - зарплата '+ obj[key] +' долларов.')
+
+</script>
+</body>
+</html>
