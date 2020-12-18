@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #plain {
+            height: 95vh;
+            border-bottom: 1px yellow groove;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        #ball {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .grass {
+            width: 100vw;
+            height: 4.8vh;
+            background-color: green;
+        }
+    </style>
+    <head>
+    <script>
+        function animate(options) {
+            var start = performance.now();
+            requestAnimationFrame(function animate(time) {
+                var timeFraction = (time - start) / options.duration
+                if (timeFraction > 1) timeFraction = 1
+                var progress = options.timing(timeFraction)
+                options.draw(progress)
+                if (timeFraction < 1) requestAnimationFrame(animate)
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="plain">
+        <img src="ball.jpg" id="ball">
+    </div>
+    <div class="grass">
+    </div>
+
+    <script>
+        function makeEaseOut(timing) {
+            return function(timeFraction) {
+                return 1 - timing(1 - timeFraction);
+            }
+        }
+        function bounce(timeFraction) {
+            for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+                if (timeFraction >= (7 - 4 * a) / 11)
+                    return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+            }
+        }
+        ball.onclick = function() {
+            let to = plain.clientHeight - ball.clientHeight;
+            animate({
+                duration: 2000,
+                timing: makeEaseOut(bounce),
+                draw(progress) {
+                    ball.style.top = to * progress + 'px'
+                }
+            })
+        }
+    </script>
+</body>
+</html>
