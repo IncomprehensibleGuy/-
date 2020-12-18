@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .carousel {
+            position: relative;
+            width: 400px;
+            padding: 0 40px;
+            border: 1px solid #ccc;
+            background: #eee;
+        }
+
+        .carousel img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            display: inline-block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: calc(50% - 24px);
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            outline-style: none;
+            border: 1px solid gray;
+            border-radius: 50%;
+            background: #eee;
+            color: #444;
+            font-size: 24px;
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        .gallery {
+            width: 400px;
+            overflow: hidden;
+        }
+
+        .gallery-list {
+            height: 250px;
+            width: 9999px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            transition: margin-left .3s;
+            font-size: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="carousel" class="carousel">
+        <button class="arrow prev" onclick="slideLeft()">⇦</button>
+        <div class="gallery">
+            <ul class="gallery-list">
+                <img src="https://media.proglib.io/wp-uploads/2018/07/1_qnI8K0Udjw4lciWDED4HGw.png" alt="">
+                <img src="https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUy_8P9tcC9G_lkqWdvgFmxRpoI2b09kwyw&usqp=CAU" alt="">
+                <img src="https://leanylabs.com/static/6fffce26995f026b362fc6e97719dd63/73f08/featured_1200.png" alt="">
+            </ul>
+        </div>
+        <button class="arrow next" onclick="slideRight()">⇨</button>
+    </div>
+
+    <script>
+        let width = 400
+        let list = carousel.querySelector('.gallery-list')
+        let center = 0
+
+        function  slideLeft() {
+            if (center < 0) {
+                center += width
+                list.style.marginLeft = center + 'px'
+                console.log(center)
+            }
+        }
+        function slideRight() {
+            if (center > (list.children.length - 1)*(-width)) {
+                center -= width
+                list.style.marginLeft = center + 'px'
+                console.log(center)
+            }
+        }
+    </script>
+
+</body>
+</html>

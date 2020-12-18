@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .carousel {
+            position: relative;
+            width: 400px;
+            border: 1px solid #ccc;
+            background: #eee;
+        }
+        .carousel img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            display: inline-block;
+        }
+        .active-img {
+            margin: 0;
+            padding: 0;
+            width: 400px;
+            height: 250px;
+        }
+        .images-row {
+            display: flex;
+            justify-content: center;
+        }
+        .images-row img {
+            box-sizing: border-box;
+            height: 50px;
+            width: 50px;
+            margin: 5px 2.5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="carousel" class="carousel">
+        <div id="active-img">
+           <img src="https://media.proglib.io/wp-uploads/2018/07/1_qnI8K0Udjw4lciWDED4HGw.png" alt="">
+        </div>
+        <div class="images-row">
+            <img src="https://media.proglib.io/wp-uploads/2018/07/1_qnI8K0Udjw4lciWDED4HGw.png" alt="">
+            <img src="https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUy_8P9tcC9G_lkqWdvgFmxRpoI2b09kwyw&usqp=CAU" alt="">
+            <img src="https://leanylabs.com/static/6fffce26995f026b362fc6e97719dd63/73f08/featured_1200.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        inactiveImages = document.getElementsByClassName("images-row")[0].children
+
+        for (let img of inactiveImages) {
+            img.className = "inactive"
+        }
+
+        carousel.onclick = function (event) {
+            if (event.target.tagName != 'IMG') 
+                return
+            imgContainer = document.getElementById("active-img")
+            imgContainer.children[0].src = event.target.src
+       }
+    </script>
+
+</body>
+</html>

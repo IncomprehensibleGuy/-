@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .task1 { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    
+    <div class="task1">
+        <textarea name="" id="msg" cols="52" rows="5">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste facilis in, excepturi ea molestias earum? Quia repudiandae tempora laboriosam? In assumenda laborum rem debitis cum temporibus architecto, unde neque ex!
+        </textarea>
+        <button class="btn" onclick="changeMsg()">
+            next message
+        </button>            
+    </div>
+
+    <div class="task2">
+        <img src="https://miro.medium.com/max/3920/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg"  width="400" height="200" alt="" id="img">
+        <button class="btn" onclick="changeImg()">
+            next image
+        </button>     
+    </div>
+
+
+    <script>
+        function changeMsg() {
+            msgObj = document.getElementById("msg")
+            msgObj.value = "New message"
+        }
+        function changeImg() {
+            imgObj = document.getElementById("img")
+            imgObj.src = "https://www.pixelbird.com.au/wp-content/uploads/2020/02/angularjs.png"
+        }
+    </script>
+</body>
+</html>

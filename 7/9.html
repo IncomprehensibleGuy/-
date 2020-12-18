@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .task { margin-bottom: 30px; }
+        .btn { 
+            position: sticky;
+            top: 0;
+        }
+        .task1 { height: 200vh; }
+        .btn1 {
+            left: 0;
+        }
+        .task2 { 
+            width: 200vw;
+        }
+        .btn2 {
+            left: 100;
+        }
+        .btn3 {
+            left: 200px;
+        }
+        .btn4 {
+            left: 350px;
+        }
+        .btn5 {
+            left: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div class="task task1 task3 task4 task5">
+        <button class="btn btn1" onclick="showScrolledPxlsY()">
+            show scrolled pxls Y
+        </button>
+        <button class="btn btn3" onclick="scrollX300Y500()">
+            Go to 300x 500y
+        </button>
+        <button class="btn btn4" onclick="scrollX300Lower()">
+            300px lower from here
+        </button>
+        <button class="btn btn5" onclick="scrollMaxLow()">
+            Scroll max low
+        </button>
+    
+    </div>
+
+    <div class="task task2">
+        <button class="btn btn2" onclick="showScrolledPxlsX()">
+            show scrolled pxls X
+        </button>
+    </div>
+
+   
+    <script>
+        function showScrolledPxlsY() {
+            alert(window.pageYOffset);
+        }
+        function showScrolledPxlsX() {
+            alert(window.pageXOffset);
+        }
+        function scrollX300Y500() {
+            window.scrollTo(300, 500)
+        }
+        function scrollX300Lower() {
+            window.scrollBy(0, 300)
+        }
+        function scrollMaxLow() {
+            window.scrollTo(0, document.querySelector("body").scrollHeight)
+        }
+    </script>
+</body>
+</html>

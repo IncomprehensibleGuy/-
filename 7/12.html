@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+            font-size: 20px;
+        }
+        #tree div:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="utf-8"> 
+</head>
+<body>
+    <ul id="tree">
+        <li>1
+            <ul>
+                <li>1
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
+                <li>2
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                    </ul>
+                </li>
+                <li>3
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            2
+            <ul>
+                <li>1
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <script>
+        for (let li of tree.querySelectorAll('li')) {
+            let span = document.createElement('div')
+            li.prepend(span)
+            span.append(span.nextSibling) 
+        }
+        tree.onclick = function(event) {
+            if (event.target.tagName != 'DIV') return
+            let childrenContainer = event.target.parentNode.querySelector('ul')
+            if (!childrenContainer) return
+            childrenContainer.hidden = !childrenContainer.hidden
+        }
+    </script>
+</body>
+</html>

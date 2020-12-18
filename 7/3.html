@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .task { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="task task1">
+        <textarea name="" id="msg" cols="20" rows="3" onfocus="showMsg2()" onblur="showMsg1()">First message</textarea>
+    </div>
+
+    <div class="task task2">        
+        <button id="btn1" onclick="disable()">
+            disable me
+        </button>
+        <button id="btn2" onclick="enable()">
+            enable left button
+        </button>
+    </div>
+    
+    <div class="task task3">
+        <button id="counter" onclick="incrementClicks()">
+            0 clicks
+        </button>
+    </div>
+
+    <script>
+        function showMsg1() {
+            msgObj = document.getElementById("msg")
+            msgObj.value = "First message"
+        }
+        function showMsg2() {
+            msgObj = document.getElementById("msg")
+            msgObj.value = "Second message"
+        }
+
+        function disable() {
+            btn1 = document.getElementById("btn1")
+            btn1.disabled = true
+        }
+        function enable() {
+            btn1 = document.getElementById("btn1")
+            btn1.disabled = false
+        }
+
+        function incrementClicks() {
+            btn = document.getElementById("counter")
+            btn.innerText = (parseInt(btn.innerText.split(" ")[0], 10) + 1) + " clicks"
+        }
+
+    </script>
+</body>
+</html>

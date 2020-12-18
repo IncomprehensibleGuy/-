@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .btn { 
+            display: block; 
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="task task1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad odio non excepturi vel mollitia vero ratione voluptatem eaque, labore modi quasi fugit. Perferendis dolores accusamus ullam labore, fuga reprehenderit!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad odio non excepturi vel mollitia vero ratione voluptatem eaque, labore modi quasi fugit. Perferendis dolores accusamus ullam labore, fuga reprehenderit!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad odio non excepturi vel mollitia vero ratione voluptatem eaque, labore modi quasi fugit. Perferendis dolores accusamus ullam labore, fuga reprehenderit!
+        </p>
+        <button class="btn" onclick="changeMsg()">
+            next message
+        </button>  
+    </div>
+
+    <script>
+        function changeMsg() {
+            elements = document.getElementsByTagName("p")
+            console.log(elements);
+            for (let i = 0; i < elements.length - 1; i++) {
+                elements[i].innerText = "new text"
+            }
+        }
+    </script>
+</body>
+</html>

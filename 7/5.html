@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .task { margin-bottom: 50px; }
+        .btn { 
+            display: block; 
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="task task1">
+        <p id="p1">
+            Messssssssssssssssaaaaaaageee
+        </p>
+        <button class="btn" onclick="changeMsg()">
+            next message
+        </button>  
+    </div>
+
+    <div class="task task2">
+        <input type="text" id="input1">
+        +
+        <input type="text" id="input2">
+        =
+        <span id="result">?</span>
+        <button class="btn" onclick="add()">Нажмите чтобы сложить</button>
+    </div>
+
+    <div class="task task3">
+        <input type="text" id="input3" placeholder="Введите текст">
+        <span id="textOutput"></span>
+    </div>
+
+    <div class="task task4">
+        <div class="">
+            <a href="https://google.com" class="link">ссылка 1</a>
+            <span id="span1"></span>
+        </div>
+        <div class="">
+            <a href="https://yandex.ru" class="link">ссылка 2</a>
+            <span id="span2"></span>
+        </div>
+        <div class="">
+            <a href="https://vk.com" class="link">ссылка 3</a>
+            <span id="span3"></span>
+        </div>
+        <button class="btn" onclick="showLinks()">
+            Нажмите на меня
+        </button> 
+    </div>
+
+    <script>
+        function changeMsg() {
+            msgObj = document.getElementById("p1")
+            msgObj.innerText = "New message"
+            msgObj.style.fontSize = "30px"
+            msgObj.style.fontStyle = "italic"
+        }
+
+        function add() {
+            input1 = document.getElementById("input1")
+            input2 = document.getElementById("input2")
+            resultSpan = document.getElementById("result")
+            resultSpan.innerText = parseInt(input1.value) + parseInt(input2.value)      
+        }
+
+        const input3 = document.getElementById("input3")
+        input3.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("textOutput").innerText = input3.value         
+            }
+        })
+
+        function showLinks() {
+            links = document.querySelectorAll(".link")
+            console.log(links);
+            for (let i = 0; i < links.length; i++) {
+                el = document.getElementById("span" + (i+1).toString())
+                el.innerText = "(" + links[i].href + ")"
+            }
+        }
+
+    </script>
+</body>
+</html>

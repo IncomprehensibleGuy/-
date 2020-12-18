@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .task { margin-bottom: 50px; }
+        img { object-fit: cover; }
+        .btn { 
+            display: block; 
+            margin: 10px 0;
+        }
+        .slider-container {
+            width: 400px;
+            overflow: hidden;
+        }
+        /* 4 */
+        #slider, 
+        #slider2 {
+            position: relative;
+            width: 400px;
+            height: 250px;
+        }
+        #slider > img, 
+        #slider2 > img{
+            position: absolute;
+            transform: translateX(+400px);
+            width: 400px;
+            height: 250px;
+            transition: 1s;
+        }
+        #slider > img:nth-child(1),
+        #slider2 > img:nth-child(1) {
+            transform: translateX(0px);
+        }
+ 
+        /* 5 */
+ 
+    </style>
+</head>
+<body>
+    
+    <div class="task task1">
+        <span id="infiniteTimer">0</span>
+        <button class="btn" onclick="start1()">
+            start
+        </button>
+    </div>
+
+    <div class="task task2">
+        <span id="infiniteTimer2">0</span>
+        <button class="btn" onclick="start2()">
+            start
+        </button>
+        <button class="btn" onclick="stop()">
+            stop
+        </button>
+    </div>
+
+    <div class="task task3">
+        <span id="hh">00</span> : <span id="mm">00</span> : <span id="ss">00</span>
+    </div>
+
+    <div class="task task4">
+        <div class="slider-container">
+            <div id="slider">
+                <img src="https://media.proglib.io/wp-uploads/2018/07/1_qnI8K0Udjw4lciWDED4HGw.png" alt="">
+                <img src="https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUy_8P9tcC9G_lkqWdvgFmxRpoI2b09kwyw&usqp=CAU" alt="">
+                <img src="https://leanylabs.com/static/6fffce26995f026b362fc6e97719dd63/73f08/featured_1200.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="task task5">
+        <div class="slider-container">
+            <div id="slider2">
+                <img src="https://media.proglib.io/wp-uploads/2018/07/1_qnI8K0Udjw4lciWDED4HGw.png" alt="">
+                <img src="https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUy_8P9tcC9G_lkqWdvgFmxRpoI2b09kwyw&usqp=CAU" alt="">
+                <img src="https://leanylabs.com/static/6fffce26995f026b362fc6e97719dd63/73f08/featured_1200.png" alt="">
+            </div>                
+        </div>
+        <button class="btn" onclick="startCarousel()">
+            start
+        </button>
+        <button class="btn" onclick="stopCarousel()">
+            stop
+        </button>
+    </div>
+
+    <div class="task task6">
+        <div id="timeUntilMidnight">
+            <span id="hh2">00</span> : <span id="mm2">00</span> : <span id="ss2">00</span>
+        </div>
+    </div>
+
+    <script>
+        // 1
+        function start1() {
+            setInterval(()=> {
+                span = document.getElementById("infiniteTimer")
+                span.innerText = parseInt(span.innerText) + 1
+            }, 100)
+        }
+
+        // 2
+        let i2
+        function start2() {
+            i2 = setInterval(()=> {
+                span = document.getElementById("infiniteTimer2")
+                span.innerText = parseInt(span.innerText) + 1
+            }, 100)
+        }
+        function stop() {
+            clearInterval(i2)
+        }
+
+        // 3
+        function updateElem(element, n) {
+            if (parseInt(element.innerText) > n-2) { element.innerText = "00" }
+            else
+                if (parseInt(element.innerText) < 9) { element.innerText = "0" + (parseInt(element.innerText) + 1) }
+                else { element.innerText = parseInt(element.innerText) + 1 }
+        }
+        function createInterval(name, n, sec) {
+            setInterval(()=> { 
+                updateElem(document.getElementById(name), n) 
+            }, sec * 1000)
+        }
+        createInterval("hh", 24, 24*60)
+        createInterval("mm", 60, 60)
+        createInterval("ss", 60, 1)
+
+        // 4
+        let i = 1,
+            last = 0
+        slider = document.getElementById("slider").children
+        setInterval( () => {
+            slider[i].style.transform = "translateX(0px)"            
+            slider[last].style.transform = "translateX(+400px)"       
+            last = i
+            i++
+            if (i == slider.length)
+                i = 0
+        }, 1.5 * 1000)
+        
+        // 5
+        let k = 1,
+            last2 = 0
+        slider2 = document.getElementById("slider2").children
+        let carousel
+        function startCarousel() { carousel = setInterval( () => {
+                slider2[k].style.transform = "translateX(0px)"            
+                slider2[last2].style.transform = "translateX(+400px)"       
+                last2 = k
+                k++
+                if (k == slider2.length)
+                k = 0
+            }, 1.5 * 1000) 
+        }
+        function stopCarousel() { clearInterval(carousel) }
+
+        // 6
+        function createUnitTimer(unitId, defaultValue, secInUnit, unitMaxValue) {
+            document.getElementById(unitId).innerText = defaultValue      
+            setInterval(()=> {
+                updateUnit(unitId, unitMaxValue)
+            }, secInUnit * 1000)
+        }
+        
+        function updateUnit(unitId, unitMaxValue) {
+            element = document.getElementById(unitId)
+            if (parseInt(element.innerText) !== 0)
+                if (parseInt(element.innerText) > 9)
+                    element.innerText = parseInt(element.innerText) - 1    
+                else
+                    element.innerText = "0" + (parseInt(element.innerText) - 1)
+            else
+                element.innerText = unitMaxValue - 1
+        }
+
+        date = new Date()
+        createUnitTimer("hh2", 23 - date.getHours()  , 24*60, 24)
+        createUnitTimer("mm2", 59 - date.getMinutes(), 60   , 60)
+        createUnitTimer("ss2", 60 - date.getSeconds(), 1    , 60)
+
+    </script>
+</body>
+</html>

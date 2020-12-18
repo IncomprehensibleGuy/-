@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .btn { display: block;}
+    </style>
+</head>
+<body>
+    <div class="task">
+        <textarea name="" id="elem" cols="30" rows="10">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum vitae optio adipisci quo magni laudantium quaerat possimus aut. Beatae quos obcaecati ad eum vel aut facilis quis nam aliquid veritatis, at, ut soluta, eos delectus! Quaerat soluta, consequuntur quas consectetur ad molestiae quia libero nihil fugiat eligendi reiciendis magnam ab corporis. Perspiciatis, corrupti ex voluptatem hic nobis enim tempore illum ipsam quis nostrum natus voluptas deserunt quasi quas quisquam officia, temporibus dignissimos quae perferendis fugit libero. Dolores ullam sapiente, impedit adipisci quisquam quasi neque quas porro eaque molestiae sequi sunt aut, unde inventore ab doloremque nulla eos blanditiis cupiditate perferendis? Amet dicta praesentium maxime libero, vero, non harum ratione nesciunt qui expedita aut eos aliquid cumque laudantium, ea sunt ut sapiente veniam officiis molestiae corrupti mollitia quidem quam. Voluptatibus sunt mollitia sapiente sequi quod iure itaque distinctio in repellat! Fugiat, officia ipsum perspiciatis voluptatibus aliquid beatae aperiam est aut quia, accusantium error dignissimos molestiae! Sint velit quas autem reprehenderit incidunt, voluptate quaerat fugit laborum ea architecto assumenda animi laboriosam quidem numquam neque, ut, dolore expedita exercitationem. Incidunt pariatur est non sed debitis neque quis ad id aspernatur. Perspiciatis recusandae nihil ratione tempore? Alias vero eligendi repellendus corporis reiciendis aperiam temporibus incidunt labore nisi aliquid reprehenderit illum laboriosam velit dolore corrupti porro harum consectetur accusamus itaque eveniet mollitia, blanditiis laudantium ipsum modi. Quia rem aperiam tempora fugiat rerum illo. Aliquam possimus eveniet earum. Eos fugit aliquid ipsa explicabo tempore recusandae sunt iure dolorem quos cum quam doloremque aut doloribus illum praesentium, excepturi numquam omnis maiores eius voluptatem nam similique illo. Corporis blanditiis accusantium obcaecati, cumque porro consectetur minus maxime odit voluptatem. Maiores dicta at incidunt saepe velit iste maxime voluptatibus, delectus labore ea doloribus repellendus aspernatur inventore sapiente tempore vitae perferendis aperiam reprehenderit mollitia, accusantium itaque. Pariatur cumque numquam commodi.
+        </textarea>
+        <button class="btn" onclick="showScroll()">
+            Show scrolled pxls
+        </button>
+        <button class="btn" onclick="scrollTo200PxTop()">
+            Scroll 200 px from top
+        </button>
+        <button class="btn" onclick="scrollTo200PxBottom()">
+            Scroll 200 px from bottom
+        </button>
+
+    </div>
+
+    <script>
+       function showScroll() {
+           alert(document.getElementById("elem").scrollTop)
+       }
+       function scrollTo200PxTop() {
+           document.getElementById("elem").scrollTop = 200        
+       }
+       function scrollTo200PxBottom() {
+           document.getElementById("elem").scrollTop = document.getElementById("elem").scrollHeight - 200        
+       }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .task { margin-bottom: 30px; }
+        .btn { display: block;}
+    </style>
+</head>
+<body>
+    <div class="task task1">
+        <textarea id="msg" cols="25" rows="5">
+            Messssssssssssssssaaaaaaageee
+        </textarea>
+        <button class="btn" onclick="changeTextArea()">
+            next message
+        </button>  
+    </div>
+
+    <div class="task task2">
+        <button class="btn" onclick="hideTextArea()">
+            hide
+        </button>  
+        <button class="btn" onclick="showTextArea()">
+            show
+        </button>    
+        <textarea id="msg2" cols="52" rows="5">
+            Coooooooooooool messsssageeeeeeeeee
+        </textarea>
+    </div>
+
+    <script>
+       function changeTextArea() {
+            txt = document.getElementById("msg")
+            txt.value = "New message"
+            txt.style.color = "red"
+            txt.cols = 50
+            txt.style.borderRadius = "10px"
+        }
+        function hideTextArea() {
+            txt = document.getElementById("msg2")
+            txt.style.display = "none"
+        }
+        function showTextArea() {
+            txt = document.getElementById("msg2")
+            txt.style.display = "inline"
+        }
+    </script>
+</body>
+</html>
